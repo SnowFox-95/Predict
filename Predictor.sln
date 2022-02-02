@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Predictor", "Predictor.csproj", "{1ECB7B56-86A1-4FE7-9E05-35816C027E15}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1ECB7B56-86A1-4FE7-9E05-35816C027E15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ECB7B56-86A1-4FE7-9E05-35816C027E15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ECB7B56-86A1-4FE7-9E05-35816C027E15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ECB7B56-86A1-4FE7-9E05-35816C027E15}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4B3E4A03-4AC9-4604-AD3B-AD739660D7D4}
+	EndGlobalSection
+EndGlobal
