@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace Predictor
 {
@@ -17,14 +18,37 @@ namespace Predictor
             InitializeComponent();
         }
 
-        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        private async void BTNPREDICT_Click(object sender, EventArgs e)
         {
+          await  Task.Run(() =>
+            {
+                for (int i = 1; i <= 100; i++)
+                {
+                    this.Invoke(new Action(() => 
+                    {
+                        UpdateProgressBar(i);
+                    }));
+                    
+                    Thread.Sleep(20);
+                }
+            });
 
+
+            MessageBox.Show("prediction");
         }
-
-        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+    private void UpdateProgressBar (int i)
         {
-
+            if (i == PBpredict.Maximum)
+            {
+                PBpredict.Maximum = i + 1; //увеличить максимум
+                PBpredict.Value = i + 1; //Вернуть прошлое значение
+                PBpredict.Maximum = i; //Сбросить максимум
+            }
+            else
+            {
+                PBpredict.Value = i + 1; //Вернуть прошлое значение
+            }
+            PBpredict.Value = i;
         }
     }
 }

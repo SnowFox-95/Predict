@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.PBpredict = new System.Windows.Forms.ProgressBar();
+            this.BTNPREDICT = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,27 +47,48 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
-            this.splitContainer1.Size = new System.Drawing.Size(287, 166);
-            this.splitContainer1.SplitterDistance = 97;
+            this.splitContainer1.Panel2.Controls.Add(this.BTNPREDICT);
+
+            this.splitContainer1.Size = new System.Drawing.Size(287, 133);
+            this.splitContainer1.SplitterDistance = 56;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // PBpredict
+            // 
+            this.PBpredict.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PBpredict.Location = new System.Drawing.Point(0, 0);
+            this.PBpredict.Name = "PBpredict";
+            this.PBpredict.Size = new System.Drawing.Size(287, 51);
+            this.PBpredict.TabIndex = 1;
+            // 
+            // BTNPREDICT
+            // 
+            this.BTNPREDICT.Font = new System.Drawing.Font("Tahoma", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BTNPREDICT.Location = new System.Drawing.Point(0, 0);
+            this.BTNPREDICT.Name = "BTNPREDICT";
+            this.BTNPREDICT.Size = new System.Drawing.Size(285, 71);
+            this.BTNPREDICT.TabIndex = 0;
+            this.BTNPREDICT.Text = "ПРЕДСКАЗАТЬ!";
+            this.BTNPREDICT.UseVisualStyleBackColor = true;
+            this.BTNPREDICT.Click += new System.EventHandler(this.BTNPREDICT_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(287, 166);
+            this.ClientSize = new System.Drawing.Size(287, 133);
+            this.Controls.Add(this.PBpredict);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Шар предсказаний";
+            this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -74,6 +98,8 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.Button BTNPREDICT;
+        private System.Windows.Forms.ProgressBar PBpredict;
     }
 }
 
